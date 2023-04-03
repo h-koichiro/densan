@@ -36,7 +36,6 @@ def index_no_login():
 def index():
     if request.method == 'POST':
         pass
-    now = datetime.datetime.now(pytz.timezone('Asia/Tokyo'))
     return render_template("home.html",login=1)
 
 
