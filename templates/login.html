@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>ログイン画面</h1>
+<div class="ui divider"></div>
+<p>電算部ポータルを使用するには、ログインが必要です。</p>
+<div class="ui placeholder segment">
+    <form method="POST">
+        <div class="ui form">
+            <h3>ログイン</h3>
+            <div class="field">
+                <label>ユーザー名</label>
+                <div class="ui left icon input">
+                    <input type="text" placeholder="Username" name="user_name">
+                    <i class="user icon"></i>
+                </div>
+            </div>
+            <div class="field">
+                <label>パスワード</label>
+                <div class="ui left icon input">
+                    <input type="password" name="password">
+                    <i class="lock icon"></i>
+                </div>
+            </div>
+            <input type="submit" value="ログイン" class="ui blue submit button" name="login">
+        </div>
+    </form>
+</div>
+<h2>新規登録の場合…</h2>
+<button class="fluid ui button" onclick="location.href='/signup'">新規登録へ</button>
+{% endblock %}

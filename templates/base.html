@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- semantic.css  -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <!-- semantic.js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+</head>
+
+<body>
+    <div class="ui container" style="padding-top: 5%;">
+        <div class="ui inverted large borderless fixed fluid menu column">
+            <a class="header item" href="/" style="font-size: large;">電算ポータル</a>
+            <div class="right menu">
+                <div class="ui dropdown item">
+                    {% if login %}
+                    <div class="header">
+                        <h4><a href="/logout">ログアウト　</a></h4>
+                    </div>
+                    <i class="user circle icon" style="font-size: large;"></i>
+                    {% else %}
+                    <div class="header">
+                        <h4><a href="/login">新規登録 ／ ログイン　</a></h4>
+                    </div>
+                    <i class="user circle icon" style="font-size: large;"></i>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
